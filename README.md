@@ -1,0 +1,2 @@
+# gEquipo
+Gestión de equipo
