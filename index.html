@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Gestión de equipo</title>
+	<link rel="stylesheet" href="css/estilos.css">
+	<script src="js/funcionesEquipo.js"></script>
+</head>
+<body>
+	<h1 id="deporte"> Deporte <h1>
+	<h2 id="nombre">Nombre del equipo</h2>
+	<p>Número de jugadores en plantilla: <span id="plantilla"></span></p>
+	<p>Número de jugadores en campo: <span id="jugadores"></span></p>
+	<p>Categoría: <span id="categoria"></span></p>
+
+	<button onclick="introducirDatos();">Introducir Equipo</button>
+	<button onclick="miEquipo.mostrarDatos();">Presentar Equipo</button>
+	<button onclick="miEquipo.entrenar();">Entrenar</button>
+	<button onclick="miEquipo.desentrenar();">Desentrenar</button>
+	<button onclick="miEquipo.jugar();">Jugar Partido</button>
+
+	<p>Nivel Actual: <span id="nivel"></span> <button onclick="actualizarNivel();">Actualizar Nivel</button></p>
+<!-- Datos del próximo encuentro -->
+	<h2>Próximo encuentro</h2>
+	<table>
+		<tr>
+    	<th>Fecha</th>
+    	<th>Contrincante</th> 
+   	 	<th>Lugar</th>
+  	</tr>
+		<tr>
+			<td id="fecha"></td>
+			<td id="contrincante"></td>
+			<td id ="lugar"></td>
+		</tr>
+	</table>
+</body>
+</html>
