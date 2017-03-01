@@ -4,3 +4,9 @@ h1 {
 h2 {
 	text-transform: capitalize;
 }
+button {
+	padding: 10px;
+	background-color: #16c54e;
+	color: white;
+	font-size: 12pt;
+}

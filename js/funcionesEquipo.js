@@ -1,11 +1,11 @@
 var miEquipo = new Object();
-var nivel=0;
 
 miEquipo.nombre = undefined;
 miEquipo.deporte = undefined;
 miEquipo.numJugadores = undefined;
 miEquipo.numPlantilla = undefined;
 miEquipo.categoria = undefined;
+miEquipo.nivel = 0;
 
 
 miEquipo.setNombre = function(){
@@ -44,11 +44,16 @@ miEquipo.getCategoria = function(){
 }
 //Métodos
 miEquipo.entrenar = function(){
-	nivel = ++nivel;
+	++miEquipo.nivel;
+	//En este caso también vale nivel++
+	alert("¡BUEN TRABAJO!")
+	actualizarNivel();
 }
 
 miEquipo.desentrenar = function(){
-	nivel= --nivel;
+	--miEquipo.nivel;
+	//En este caso también vale nivel--
+	actualizarNivel();
 }
 
 miEquipo.mostrarDatos = function(){
@@ -57,7 +62,7 @@ miEquipo.mostrarDatos = function(){
 	document.getElementById("plantilla").innerHTML = miEquipo.getNumPlantilla();
 	document.getElementById("jugadores").innerHTML = miEquipo.getNumJugadores();
 	document.getElementById("categoria").innerHTML = miEquipo.getCategoria();
-	document.getElementById("nivel").innerHTML = nivel;
+	document.getElementById("nivel").innerHTML = miEquipo.nivel;
 }
 
 miEquipo.jugar = function(){
@@ -67,15 +72,10 @@ miEquipo.jugar = function(){
 }
 
 //Otras funciones
-function iniNivel(){
-	return 0;
-}
 function actualizarNivel(){
-	document.getElementById("nivel").innerHTML = nivel;
+	document.getElementById("nivel").innerHTML = miEquipo.nivel;
 }
 function introducirDatos(){
-	nivel=iniNivel();
-	console.log("nivel:" + nivel);
 	miEquipo.setDeporte();
 	miEquipo.setNombre();
 	miEquipo.setNumPlantilla();
