@@ -4,35 +4,66 @@
 	<meta charset="UTF-8">
 	<title>Gestión de equipo</title>
 	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<script src="js/funcionesEquipo.js"></script>
 </head>
 <body>
-	<h1 id="deporte"> Deporte <h1>
-	<h2 id="nombre">Nombre del equipo</h2>
-	<p>Número de jugadores en plantilla: <span id="plantilla"></span></p>
-	<p>Número de jugadores en campo: <span id="jugadores"></span></p>
-	<p>Categoría: <span id="categoria"></span></p>
-
-	<button onclick="introducirDatos();">Introducir Equipo</button>
-	<button onclick="miEquipo.mostrarDatos();">Presentar Equipo</button>
-	<button onclick="miEquipo.entrenar();">Entrenar</button>
-	<button onclick="miEquipo.desentrenar();">Desentrenar</button>
-	<button onclick="miEquipo.jugar();">Jugar Partido</button>
-
-	<p>Nivel Actual: <span id="nivel"></span> <button onclick="actualizarNivel();">Actualizar Nivel</button></p>
-<!-- Datos del próximo encuentro -->
-	<h2>Próximo encuentro</h2>
-	<table>
-		<tr>
-    	<th>Fecha</th>
-    	<th>Contrincante</th> 
-   	 	<th>Lugar</th>
-  	</tr>
-		<tr>
-			<td id="fecha"></td>
-			<td id="contrincante"></td>
-			<td id ="lugar"></td>
-		</tr>
-	</table>
+	<header class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 id="deporte"> Deporte <h1>
+			</div>
+		</div>
+	</header>
+	<section class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2 id="nombre">Nombre del equipo</h2>
+				<p>Número de jugadores en plantilla: <span id="plantilla"></span></p>
+				<p>Número de jugadores en campo: <span id="jugadores"></span></p>
+				<p>Categoría: <span id="categoria"></span></p>
+				<p>Nivel Actual: <span id="nivel"></span></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="btn-group">
+					<button class="btn btn-primary" onclick="introducirDatos();">Introducir Equipo</button>
+					<button class="btn btn-primary" onclick="miEquipo.mostrarDatos();">Presentar Equipo</button>
+					<button class="btn btn-primary" onclick="miEquipo.entrenar();">Entrenar</button>
+					<button class="btn btn-primary" onclick="miEquipo.desentrenar();">Desentrenar</button>
+					<button class="btn btn-primary" onclick="miEquipo.jugar();">Jugar Partido</button>
+					<button class="btn btn-primary" onclick="actualizarNivel();">Actualizar Nivel</button>
+				</div>
+			</div>
+		</div>
+<hr>
+		<!-- Datos del próximo encuentro -->
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Próximo encuentro</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="table-responsive">
+				<table class="table">
+					<thead>
+						<tr>
+				    	<th>Fecha</th><th>Contrincante</th><th>Lugar</th>
+				  	</tr>
+			  	</thead>
+			  	<tbody>
+						<tr>
+							<td id="fecha"></td>
+							<td id="contrincante"></td>
+							<td id ="lugar"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
